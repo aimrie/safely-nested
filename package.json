@@ -1,0 +1,26 @@
+{
+  "name": "safely-nested",
+  "version": "1.0.0",
+  "description": "A safe way to access values in deeply nested objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimrie/safely-nested.git"
+  },
+  "keywords": [
+    "safe",
+    "nested",
+    "object",
+    "undefined",
+    "validate"
+  ],
+  "author": "Aaron Imrie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aimrie/safely-nested/issues"
+  },
+  "homepage": "https://github.com/aimrie/safely-nested#readme"
+}
