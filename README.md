@@ -2,6 +2,11 @@
 
 A safe way to access values in deeply nested objects.
 
+## Installation
+
+```
+npm install safely-nested
+```
 
 # Syntax
 ```

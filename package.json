@@ -4,7 +4,7 @@
   "description": "A safe way to access values in deeply nested objects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/aimrie/safely-nested/issues"
   },
-  "homepage": "https://github.com/aimrie/safely-nested#readme"
+  "homepage": "https://github.com/aimrie/safely-nested#readme",
+  "devDependencies": {
+    "mocha": "^5.0.1"
+  }
 }
