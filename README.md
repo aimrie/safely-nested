@@ -1,4 +1,4 @@
-# safely-nested
+# safely-nested [![Build Status](https://travis-ci.org/aimrie/safely-nested.svg?branch=master)](https://travis-ci.org/aimrie/safely-nested)
 
 A safe way to access values in deeply nested objects.
 
