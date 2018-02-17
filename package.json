@@ -1,6 +1,6 @@
 {
   "name": "safely-nested",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A safe way to access values in deeply nested objects.",
   "main": "index.js",
   "scripts": {
