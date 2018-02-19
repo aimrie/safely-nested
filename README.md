@@ -46,12 +46,13 @@ var nest = {
   }
 };
 
+var invalidPath = "foo.bar.qux.2";
 var fallback = "grault";
 
 safe("foo.bar.baz", nest); // 1
 safe("foo.bar.qux.0", nest); // 'quux'
-safe("foo.bar.qux.2", nest); // undefined
-safe("foo.bar.qux.2", nest, fallback); // 'grault'
+safe(invalidPath, nest); // undefined
+safe(invalidPath, nest, fallback); // 'grault'
 
 // you can also pass in a callback
 var callback = function() {
