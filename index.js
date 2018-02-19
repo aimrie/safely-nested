@@ -1,9 +1,11 @@
 module.exports = function(path, obj, fallback = undefined) {
-  if (arguments.length < 1) {
+  if (arguments.length <= 1) {
     return fallback;
   }
   if (typeof path === "string") {
     path = path.split(".");
+  } else if (!path.isArray) {
+    return fallback;
   }
 
   var val = path.reduce(function(name, value) {

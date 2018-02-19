@@ -21,8 +21,19 @@ describe("safe", function() {
   it("should return fallback when the value is missing", function() {
     assert.equal(safe(invalidPath, nest, fallback), fallback);
   });
-  it("should return fallback when arguments are invalid");
+  it("should return fallback when arguments are invalid", function() {
+    assert.equal(safe(1, nest, fallback), fallback);
+    assert.equal(safe({foo: "bar"}, nest, fallback), fallback);
+    assert.equal(safe([1, 2, 3], nest, fallback), fallback);
+    assert.equal(safe(validPath, 1, fallback), fallback);
+    assert.equal(safe(validPath, 1, fallback), fallback);
+    assert.equal(safe(invalidPath, "foo", fallback), fallback);
+    assert.equal(safe(invalidPath, "foo", fallback), fallback);
+  });
   it("should return undefined when no arguments are given", function() {
     assert.equal(safe(), undefined);
   });
+  it("should return undefined when one argument is given", function() {
+    assert.equal(safe(fallback), undefined);
+  })
 });
