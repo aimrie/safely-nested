@@ -9,9 +9,11 @@ npm install safely-nested
 ```
 
 # Syntax
+
 ```
 safely-nested(path, object[, fallback])
 ```
+
 ## Parameters
 
 ```
@@ -31,6 +33,7 @@ fallback (optional, defaults to undefined)
 The nested value or `fallback`.
 
 # Usage
+
 ```
 var safe = require("safely-nested");
 
@@ -49,4 +52,23 @@ safe("foo.bar.baz", nest); // 1
 safe("foo.bar.qux.0", nest); // 'quux'
 safe("foo.bar.qux.2", nest); // undefined
 safe("foo.bar.qux.2", nest, fallback); // 'grault'
+
+// you can also pass in a callback
+var callback = function() {
+  console.log('nothing here!');
+  return "grault";
+};
+
+safe(invalidPath, nest, callback) // [Function: callback]
+safe(invalidPath, nest, callback()) // grault
+
+// or pass one inline
+safe(
+  invalidPath,
+  nest,
+  (function() {
+    console.log("nothing here!");
+    return "grault";
+  })()
+)
 ```
